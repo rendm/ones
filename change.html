@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<meta name="apple-mobile-web-app-capable" content="no"/>
+	<link rel="stylesheet" href="swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+<body ng-app="app">
+	<div class="wrap">
+		<div class="header">
+			<span></span>
+			<span>公司</span>
+			<span><i class="icon iconfont">&#xe62f;</i></span>
+		</div>
+		<div class="section">
+			<div class="title">
+				<span>融资<em class="em"></em></span>
+				<span>规模<em class="em"></em></span>
+				<span class="no">行业<em class="em"></em></span>
+			</div>
+			<div class="ex"  ng-controller="big">
+				<dl class="big">
+					<dt class="timg" ng-repeat="element in json">
+						<img src="{{element.img}}" alt="">
+					</dt>
+					<dd class="text" >
+						<b>{{element.b}}</b>
+						<span>{{element.c}}</span>
+						<span>{{element.d}}</span>
+						<span class="blue">{{element.blue}}</span> 
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="footer">
+
+		</div>
+	</div>
+	<script src="script/angular.min.js"></script>
+	<script src="controller/app.js"></script>
+	<script src="controller/logincontrlooer.js"></script>
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth/375*50+"px";
+	</script>
+</body>
+</html>
